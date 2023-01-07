@@ -8,29 +8,35 @@
     padding: 0px;
 }
 
+:root {
+    --font-title: 'Sriracha', cursive;
+    --font-body: 'Srisakdi', cursive;
+}
+
 html, body {
-    min-width: 100vh;
+    /*min-width: 95vw;*/
     min-height: 100vh;
 
-    font-family: 'Srisakdi', cursive;
+    font-family: var(--font-body);
 }
 
 header {
     background-color: rgb(14, 14, 14);
     color: white;
     text-align: center;
+
+    font-family: var(--font-title);
 }
 
     header h1 {
         padding-top: 20px;
-        font-size: 5em;
+        font-size: 5.5vw;
         font-variant: small-caps;
-
-        font-family: 'Sriracha', cursive;
     }
 
     header p {
         padding: 10px 0px 30px 0px;
+        font-size: 3vw;
     }
 
     header a {
@@ -44,8 +50,9 @@ header {
     }
 
 section p {
-    font-size: 40px;
-    line-height: 2em;
+    font-size: 4vw;
+    line-height: 1.5em;
+    padding-bottom: 4vh;
 }
 
 section.normal {
@@ -58,8 +65,12 @@ section.normal {
 section.fundo {
     background-color: rgb(43, 43, 43);
     color: white;
+    box-shadow: inset 2px 6px 10px 2px rgba(0, 0, 0, 0.400);
 
     padding: 10vh 0px 10vh 40px;
+
+    background-size: cover;
+    background-attachment: fixed;
 }
 
     section.fundo p {
@@ -67,17 +78,18 @@ section.fundo {
 
         padding: 10px;
 
-        width: fit-content;
+        /*width: fit-content;*/
+        display: inline-block;
     }
 
     section#fundo-1 {
         background-image: url(public/images/background001.jpg);
-        background-position: center right;
+        background-position: right center;
     }
 
     section#fundo-2 {
         background-image: url(public/images/background002.jpg);
-        background-position: center left;
+        background-position: left center;
     }
 
 
